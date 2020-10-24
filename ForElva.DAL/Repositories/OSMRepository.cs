@@ -1,4 +1,6 @@
 ﻿using ForElva.DAL.Interfaces;
+using Microsoft.Win32;
+using System;
 using System.IO;
 using System.Net;
 using System.Text;
@@ -14,8 +16,18 @@ namespace ForElva.DAL.Repositories
 
         public void Save(string search, string fileName, string count)
         {
-            var output = string.Format(@"E:\\{0}.txt", fileName);
+            var path = string.Empty;
+
+            RegistryKey rKey = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Internet Explorer\Main");
+            if (rKey != null)
+                path = (string)rKey.GetValue("Default Download Directory");
+
+            if (string.IsNullOrEmpty(path))
+                path = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\downloads";
+
             
+            var output = Path.Combine(path, $"{fileName}.txt");
+
             using (StreamWriter sw = new StreamWriter(output, false))
             {
                 var result = GetData(search, count);

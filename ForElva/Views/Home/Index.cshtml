@@ -66,14 +66,6 @@
 		$('#saveForm').fadeToggle(500);		
 		window.location.href = `@Url.Action("Save", "Home")?search=${searchText.value}&fileName=${saveFile}&count=${countSaveElements}`;
 
-		window.onload = function () {
-			document.getElementById('btnSave').onclick = function () {
-				var a = document.createElement("a")
-				a.setAttribute("href", "data:text/plain," + document.getElementById('content').innerHTML.replace(/<br>/g, encodeURIComponent("\r\n")));
-				a.setAttribute("download", "filename.txt");
-				a.click();
-			};
-		};
 		$('#search').val('');
 		$('#fileName').val('');
 		$('#countSaveElements').val('');

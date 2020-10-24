@@ -1,11 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "OZQqFJsGarHYlx6zAnwLD5DmvTJ620t6DR23xuAH2qJ2Mxcm3NVFhMy6e6AdE58XoN39EJ1hvuyMY7A8XqS0rQ==",
+  "dgSpecHash": "YisuOvZJx1wvDhY0SUSnHkO3RO/vlBcBvH3On1aZG6uIsmQWTEmYfGJBhgw4FcBWJKbHOE5TDSBZuObJRyNnRg==",
   "success": true,
   "projectFilePath": "E:\\source\\C#\\ForElva\\ForElva.DAL\\ForElva.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\htmlagilitypack\\1.11.25\\htmlagilitypack.1.11.25.nupkg.sha512",
-    "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.9\\microsoft.extensions.dependencyinjection.abstractions.3.1.9.nupkg.sha512"
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.9\\microsoft.extensions.dependencyinjection.abstractions.3.1.9.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

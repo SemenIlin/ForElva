@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForElva", "ForElva\ForElva.csproj", "{046723A7-1C59-4D13-9D44-01242BC594C1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForElva.DAL", "ForElva.DAL\ForElva.DAL.csproj", "{BE101BF7-758E-45D9-A697-F53F11CC2DD1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForElva.BLL", "ForElva.BLL\ForElva.BLL.csproj", "{DF0F24DA-F06E-42AD-AF18-EBF69A28EC42}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{046723A7-1C59-4D13-9D44-01242BC594C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{046723A7-1C59-4D13-9D44-01242BC594C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{046723A7-1C59-4D13-9D44-01242BC594C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{046723A7-1C59-4D13-9D44-01242BC594C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE101BF7-758E-45D9-A697-F53F11CC2DD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE101BF7-758E-45D9-A697-F53F11CC2DD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE101BF7-758E-45D9-A697-F53F11CC2DD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE101BF7-758E-45D9-A697-F53F11CC2DD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF0F24DA-F06E-42AD-AF18-EBF69A28EC42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF0F24DA-F06E-42AD-AF18-EBF69A28EC42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF0F24DA-F06E-42AD-AF18-EBF69A28EC42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF0F24DA-F06E-42AD-AF18-EBF69A28EC42}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B2E3561-AE80-47A0-8589-3752623D5380}
+	EndGlobalSection
+EndGlobal

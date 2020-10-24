@@ -1,0 +1,102 @@
+﻿@{
+	ViewData["Title"] = "Home Page";
+}
+<div class="col-md-6 col-lg-6 col-xl-6 col-xs-12 col-sm-12">
+	<div class="row">
+		<div class="col-md-4">
+			<div class="form-group">
+				<input id="search" onkeyup="checkSearch()" placeholder="input value" class="form-control" />
+			</div>
+			<div class="form-group">
+				<input type="button" id="btnSearch" onclick="open_newWimdow()" disabled="disabled" value="Search" />
+			</div>
+		</div>
+	</div>
+
+	<div class="row" id="saveForm" style="display: none;">
+		<div class="col-md-4">
+			<div class="form-group">
+				<input id="fileName" onkeyup="checkSave()" placeholder="file name" class="form-control" />
+				<input id="countSaveElements" onkeyup="checkSave()" placeholder="more than 1" class="form-control" />
+			</div>
+			<div class="form-group">
+				<input type="button" id="btnSave" onclick="save_File()" disabled="disabled" value="Save" />
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	var searchText, saveFile, countSaveElements;
+
+	function open_newWimdow() {
+		 searchText = document.getElementById('search');
+		 window.open(`@Url.Action("ShowMap", "Home")?search=${searchText.value}`, '_blank');
+	}
+
+	$(document).ready(function () {
+		$('#btnSearch').click(function () {
+			$('#saveForm').slideToggle(300);
+			return false;
+		});
+	});
+
+	function checkSearch() {
+		searchText = $('#search').val();
+		if (searchText.length != 0)
+			$('#btnSearch').removeAttr('disabled');
+		else {
+			$('#btnSearch').attr('disabled', 'disable');
+			$('#saveForm').hide();
+		}
+	}
+
+	function checkSave() {
+		saveFile = $('#fileName').val();
+		countSaveElements = $('#countSaveElements').val();
+		if (searchText.length != 0 && countSaveElements.length != 0 && countSaveElements > 0)
+			$('#btnSave').removeAttr('disabled');
+		else {
+			$('#btnSave').attr('disabled', 'disable');
+		}
+	}
+
+	function save_File() {
+		$('#btnSave').attr('disabled', 'disable');
+		$('#saveForm').fadeToggle(500);		
+		window.location.href = `@Url.Action("Save", "Home")?search=${searchText.value}&fileName=${saveFile}&count=${countSaveElements}`;
+
+		window.onload = function () {
+			document.getElementById('btnSave').onclick = function () {
+				var a = document.createElement("a")
+				a.setAttribute("href", "data:text/plain," + document.getElementById('content').innerHTML.replace(/<br>/g, encodeURIComponent("\r\n")));
+				a.setAttribute("download", "filename.txt");
+				a.click();
+			};
+		};
+		$('#search').val('');
+		$('#fileName').val('');
+		$('#countSaveElements').val('');
+	}
+
+	$(document).ready(function () {
+
+		$("#countSaveElements").keydown(function (event) {
+
+			// Разрешаем: backspace, delete, tab и escape
+			if (event.keyCode == 46 || event.keyCode == 8 ||				
+				// Разрешаем: home, end, влево, вправо
+				(event.keyCode >= 35 && event.keyCode <= 39)) {
+				// Ничего не делаем
+				return;
+			} else {
+				// Запрещаем все, кроме цифр на основной клавиатуре, а так же Num-клавиатуре
+				if ((event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105)) {
+					event.preventDefault();
+				}
+			}
+		});
+	});
+
+	
+</script>

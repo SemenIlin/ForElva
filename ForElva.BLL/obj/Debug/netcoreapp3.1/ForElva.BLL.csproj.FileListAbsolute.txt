@@ -1,0 +1,12 @@
+E:\source\C#\ForElva\ForElva.BLL\bin\Debug\netcoreapp3.1\ForElva.BLL.deps.json
+E:\source\C#\ForElva\ForElva.BLL\bin\Debug\netcoreapp3.1\ForElva.BLL.dll
+E:\source\C#\ForElva\ForElva.BLL\bin\Debug\netcoreapp3.1\ForElva.BLL.pdb
+E:\source\C#\ForElva\ForElva.BLL\bin\Debug\netcoreapp3.1\ForElva.DAL.dll
+E:\source\C#\ForElva\ForElva.BLL\bin\Debug\netcoreapp3.1\ForElva.DAL.pdb
+E:\source\C#\ForElva\ForElva.BLL\obj\Debug\netcoreapp3.1\ForElva.BLL.csprojAssemblyReference.cache
+E:\source\C#\ForElva\ForElva.BLL\obj\Debug\netcoreapp3.1\ForElva.BLL.AssemblyInfoInputs.cache
+E:\source\C#\ForElva\ForElva.BLL\obj\Debug\netcoreapp3.1\ForElva.BLL.AssemblyInfo.cs
+E:\source\C#\ForElva\ForElva.BLL\obj\Debug\netcoreapp3.1\ForElva.BLL.csproj.CopyComplete
+E:\source\C#\ForElva\ForElva.BLL\obj\Debug\netcoreapp3.1\ForElva.BLL.dll
+E:\source\C#\ForElva\ForElva.BLL\obj\Debug\netcoreapp3.1\ForElva.BLL.pdb
+E:\source\C#\ForElva\ForElva.BLL\obj\Debug\netcoreapp3.1\ForElva.BLL.csproj.CoreCompileInputs.cache

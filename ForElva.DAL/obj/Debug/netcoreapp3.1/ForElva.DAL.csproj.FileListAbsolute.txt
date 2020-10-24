@@ -1,0 +1,9 @@
+E:\source\C#\ForElva\ForElva.DAL\bin\Debug\netcoreapp3.1\ForElva.DAL.deps.json
+E:\source\C#\ForElva\ForElva.DAL\bin\Debug\netcoreapp3.1\ForElva.DAL.dll
+E:\source\C#\ForElva\ForElva.DAL\bin\Debug\netcoreapp3.1\ForElva.DAL.pdb
+E:\source\C#\ForElva\ForElva.DAL\obj\Debug\netcoreapp3.1\ForElva.DAL.csprojAssemblyReference.cache
+E:\source\C#\ForElva\ForElva.DAL\obj\Debug\netcoreapp3.1\ForElva.DAL.AssemblyInfoInputs.cache
+E:\source\C#\ForElva\ForElva.DAL\obj\Debug\netcoreapp3.1\ForElva.DAL.AssemblyInfo.cs
+E:\source\C#\ForElva\ForElva.DAL\obj\Debug\netcoreapp3.1\ForElva.DAL.dll
+E:\source\C#\ForElva\ForElva.DAL\obj\Debug\netcoreapp3.1\ForElva.DAL.pdb
+E:\source\C#\ForElva\ForElva.DAL\obj\Debug\netcoreapp3.1\ForElva.DAL.csproj.CoreCompileInputs.cache

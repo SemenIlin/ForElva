@@ -5,7 +5,8 @@
 	<div class="row">
 		<div class="col-md-4">
 			<div class="form-group">
-				<input id="search" onkeyup="checkSearch()" placeholder="input value" class="form-control" />
+				<label>Searched region</label>
+				<input id="search" onkeyup="checkSearch()" placeholder="search" class="form-control" />
 			</div>
 			<div class="form-group">
 				<input type="button" id="btnSearch" onclick="open_newWimdow()" disabled="disabled" value="Search" />
@@ -16,7 +17,10 @@
 	<div class="row" id="saveForm" style="display: none;">
 		<div class="col-md-4">
 			<div class="form-group">
+				<label>File name</label>
 				<input id="fileName" onkeyup="checkSave()" placeholder="file name" class="form-control" />
+				<br />
+				<label>Save every</label>
 				<input id="countSaveElements" onkeyup="checkSave()" placeholder="more than 1" class="form-control" />
 			</div>
 			<div class="form-group">

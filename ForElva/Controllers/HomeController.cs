@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ForElva.BLL.Interfaces;
+using System.Collections.Generic;
 
 namespace ForElva.Controllers
 {
@@ -21,23 +22,40 @@ namespace ForElva.Controllers
         {
             var path = string.Format("{0}{1}", _service.Url, search);
             return Redirect(path);
-        }
-
+        }   
         public IActionResult Save(string search, string fileName, string count)
         {
             try
             {
+                var extension = ".txt";
+                var resultFileName = fileName + extension;
                 lock (threadLock)
                 {
-                    _service.Save(search, fileName, count);
+                    return File(_service.GetData(search, count), GetMineTypes()[extension], resultFileName);
                 }
-
-                return RedirectToAction("Index");
             }
             catch 
             {
                 return View("Error");
             }
+        }
+
+        private Dictionary<string, string> GetMineTypes()
+        {
+            return new Dictionary<string, string>()
+            {
+                {".txt", "text/plain" },
+                {".pdf", "application/pdf" },
+                {".doc", "application/vnd.ms-word" },
+                {".docx", "application/vnd.ms-word" },
+                {".xls", "application/vnd.ms-exel" },
+                {".xlsx", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" },
+                {".png", "image/png" },
+                {".jpg", "image/jpeg" },
+                {".jpeg", "image/jpeg" },
+                {".gif", "image/gif" },
+                {".csv", "text/csv" }
+            };
         }
     }
 }

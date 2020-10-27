@@ -2,7 +2,7 @@
 {
     public interface IRepository
     {
-        void Save(string search, string fileName, string count);
-        string Url{ get; }
+        byte[] GetData(string search, string count);
+        string Url{ get; }      
     }
 }

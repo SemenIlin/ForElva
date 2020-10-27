@@ -12,10 +12,9 @@ namespace ForElva.BLL.Services
         }
 
         public string Url{ get { return _repository.Url; } }
-
-        public void Save(string search, string fileName, string count)
+        public byte[] GetData(string search, string count)
         {
-            _repository.Save(search, fileName, count);
+            return _repository.GetData(search,  count);
         }
     }
 }

@@ -1,6 +1,4 @@
 ﻿using ForElva.DAL.Interfaces;
-using Microsoft.Win32;
-using System;
 using System.IO;
 using System.Net;
 using System.Text;
@@ -13,29 +11,7 @@ namespace ForElva.DAL.Repositories
         private const string SAVE_FORMAT = "&format=json&polygon_geojson=1";
 
         public string Url { get; private set; } = "https://nominatim.openstreetmap.org/ui/search.html?q=";
-
-        public void Save(string search, string fileName, string count)
-        {
-            var path = string.Empty;
-
-            RegistryKey rKey = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Internet Explorer\Main");
-            if (rKey != null)
-                path = (string)rKey.GetValue("Default Download Directory");
-
-            if (string.IsNullOrEmpty(path))
-                path = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\downloads";
-
-            
-            var output = Path.Combine(path, $"{fileName}.txt");
-
-            using (StreamWriter sw = new StreamWriter(output, false))
-            {
-                var result = GetData(search, count);
-                sw.WriteLine(result);
-            }
-        }
-
-        private StringBuilder GetData(string search, string count)
+        public byte[] GetData(string search, string count)
         {
             int.TryParse(count, out int countSave); 
             var result = new StringBuilder();
@@ -119,8 +95,8 @@ namespace ForElva.DAL.Repositories
                     }
 
                 }
-                return result;
+                return Encoding.UTF8.GetBytes(result.ToString()); ;
             }
-        }
+        }        
     }
 }

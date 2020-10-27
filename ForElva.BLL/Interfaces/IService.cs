@@ -2,7 +2,7 @@
 {
     public interface IService
     {
-        void Save(string search, string fileName, string count);
+        byte[] GetData(string search, string count);
         string Url { get; }
     }
 }
